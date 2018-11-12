@@ -4,14 +4,86 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<style type="text/css">
+    p{
+      text-align: center;
+      width: 100%;
+    }
+    .fill{
+      width: 100%;
+    }
+    .column {
+        float: left;
+        width: 50%;
+    }
+    .right *{
+      text-align: right;
+      width: 100%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    img{
+      width: 20px;
+      height: 20px;
+    }
+    .centered{
+       height: 100%;
+       display: flex!important;
+       align-content: center!important;
+       align-items: center!important;
+    }
+    ion-content{
+      background-color: lightgray;
+    }
+
+</style>
+
+<ion-content padding >
+  <ion-list>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <h2>Carteira</h2>
+        </ion-col>
+        <ion-col center text-right>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col>
+          <div class="centered"><h3>Escondida</h3></div>            
+        </ion-col>
+        <ion-col center text-center>
+          <ion-row>
+            <ion-col>
+              <img src="./assets/imgs/gas.png">        
+            </ion-col>
+            <ion-col center text-center>
+              <img src="./assets/imgs/gas.png">
+            </ion-col>
+            <ion-col center text-center>
+              <img src="./assets/imgs/gas.png">
+            </ion-col>
+            <ion-col center text-center>
+              <img src="./assets/imgs/gas.png">
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+    </ion-item>
+
+
+
+
+  </ion-list>
 </ion-content>

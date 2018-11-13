@@ -10,6 +10,56 @@ export class HomePage {
 	@ViewChild('barCanvas') barCanvas;
  
     barChart: any;
+    items = [
+    {
+        'make': 'audi',
+        'model': 'r8',
+        'year': '2012'
+    }, {
+        'make': 'audi',
+        'model': 'rs5',
+        'year': '2013'
+    }, {
+        'make': 'ford',
+        'model': 'mustang',
+        'year': '2012'
+    }, {
+        'make': 'ford',
+        'model': 'fusion',
+        'year': '2015'
+    }, {
+        'make': 'kia',
+        'model': 'optima',
+        'year': '2012'
+    },
+];
+    
+/*
+      Despesa e Receita{
+        Valor,
+        ValorRestante: virtual
+        Categoria
+        Conta
+        Data
+        Para
+        Notas
+        Caso seja programada: {
+          Repetir a cada : numero medida(semana,dias,mes,ano)
+          numero de vezes : 0 eh sem limite
+        }
+        Lembrete
+        Foto
+      }
+      Conta{
+        Nome,
+        Moeda,
+        Valor inicial,
+        Notas,
+        Escondida
+        
+      }
+      
+*/
   constructor(public navCtrl: NavController) {
 
   }

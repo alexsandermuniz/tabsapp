@@ -27,63 +27,48 @@
         display: table;
         clear: both;
     }
-    img{
-      width: 20px;
-      height: 20px;
-    }
-    .centered{
-       height: 100%;
-       display: flex!important;
-       align-content: center!important;
-       align-items: center!important;
-    }
-    ion-content{
+        ion-content{
       background-color: lightgray;
     }
 
+
 </style>
 
-<ion-content padding >
+<ion-content padding>
+  <ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
   <ion-list>
-    <ion-item text-wrap>
-      <ion-row>
-        <ion-col>
-          <h2>Carteira</h2>
-        </ion-col>
-        <ion-col center text-right>
-          <ion-note>
-            11h ago
-          </ion-note>
-        </ion-col>
-      </ion-row>
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="./assets/imgs/gas.png">
+    </ion-avatar>
+     <div class="row fill">
+      <div class="column">
+        <h2>Salário</h2>
+        <h3>Itau</h3>
+      </div>
+      <div class="column right">
+        <h2 style="font-weight: bolder;">R$8,00</h2>
+        <h3>01/11/2018</h3>
+      </div>
+    </div> 
+    <p>Dizimo</p>
+  </ion-item>
+</ion-list>
 
 
-      <ion-row>
-        <ion-col>
-          <div class="centered"><h3>Escondida</h3></div>            
-        </ion-col>
-        <ion-col center text-center>
-          <ion-row>
-            <ion-col>
-              <img src="./assets/imgs/gas.png">        
-            </ion-col>
-            <ion-col center text-center>
-              <img src="./assets/imgs/gas.png">
-            </ion-col>
-            <ion-col center text-center>
-              <img src="./assets/imgs/gas.png">
-            </ion-col>
-            <ion-col center text-center>
-              <img src="./assets/imgs/gas.png">
-            </ion-col>
-          </ion-row>
-        </ion-col>
-      </ion-row>
-
-    </ion-item>
-
-
-
-
-  </ion-list>
+<ion-card>
+      <ion-card-header>
+        Bar Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
 </ion-content>

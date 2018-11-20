@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Contas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<style type="text/css">
+    p{
+      text-align: center;
+      width: 100%;
+    }
+    img{
+      width: 30px;
+      height: 30px;
+    }
+    .centered{
+       height: 100%;
+       display: flex!important;
+       align-content: center!important;
+       align-items: center!important;
+    }
+    ion-content{
+      background-color: lightgray;
+    }
+    .teste img{
+      padding: 5px;
+      background-color: lightgray;
+    }
+
+</style>
+
+<ion-content padding >
+  <ion-list *ngFor="let conta of contas">
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <h2>{{conta.nome}}</h2>
+        </ion-col>
+        <ion-col center text-right style="color: green;">
+          <h2>R$ {{conta.valor}}</h2>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col>
+          <div class="centered"><h3>Escondida : {{conta.escondida}}</h3></div>            
+        </ion-col>
+        <ion-col center text-right  >
+          <ion-row class="teste">
+            <ion-col>
+              <img src="./assets/imgs/gas.png">        
+            </ion-col>
+            <ion-col>
+              <img src="./assets/imgs/gas.png">
+            </ion-col>
+            <ion-col >
+              <img src="./assets/imgs/gas.png">
+            </ion-col>
+            <ion-col>
+              <img src="./assets/imgs/gas.png">
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+    </ion-item>
+
+
+
+
+  </ion-list>
+</ion-content>
+

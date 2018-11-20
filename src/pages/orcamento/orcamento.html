@@ -1,0 +1,143 @@
+<!--
+  Generated template for the OrcamentoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Orcamento</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<style type="text/css">
+    p{
+      text-align: center;
+      width: 100%;
+    }
+    img{
+      width: 35px;
+      height: 30px;
+    }
+    .centered{
+       height: 100%;
+       display: flex!important;
+       align-content: center!important;
+       align-items: center!important;
+    }
+    ion-content{
+      background-color: lightgray;
+    }
+    .teste img{
+      padding: 5px;
+      background-color: lightgray;
+    }
+    .icone{
+
+    }
+
+    ion-col.my-thin-col {
+	    flex: 0 0 40px;
+	    padding:0;
+	    margin-right:10px;
+	    display: flex;
+	    justify-content: center;
+	    /*align-items: center;/* Mesmo efeito que o de baixo*/
+	    align-self: center;
+	  }
+
+	  ion-row.indicadores ion-col:nth-child(1){
+	  	/*background-color: green;*/
+	  	text-align: left;
+	  }
+	  ion-row.indicadores ion-col:nth-child(2){
+	  	/*background-color: red;*/
+	  	text-align: center;
+	  }
+	  ion-row.indicadores ion-col:nth-child(3){
+	  	/*background-color: yellow;*/
+	  	text-align: right;
+	  }
+
+
+
+    .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+
+    .w3-round-small{border-radius:2px}.w3-round,.w3-round-medium{border-radius:4px}.w3-round-large{border-radius:8px}.w3-round-xlarge{border-radius:16px}.w3-round-xxlarge{border-radius:32px}
+
+    .w3-container,.w3-panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
+
+    .w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+    .w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,.w3-bar:after{content:"";display:table;clear:both}
+
+    .w3-blue,.w3-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+
+</style>
+
+<ion-content padding >
+  <ion-list *ngFor="let orcamento of orcamentos">
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <h2>{{orcamento.nome}}</h2>
+       
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col class="my-thin-col icone">
+          <img src="./assets/imgs/gas.png"> 
+        </ion-col>
+        <ion-col>
+          	<ion-row class="indicadores">
+		        <ion-col>
+		          <h2>01/11/18</h2>
+		        </ion-col>
+		        <ion-col>
+		          <h2>{{orcamento.valorSomado*100/orcamento.valor}}%</h2>
+		        </ion-col>
+		        <ion-col>
+		          <h2>30/11/18</h2>
+		        </ion-col>
+      		</ion-row>
+      		<ion-row>
+		        <ion-col>
+		          <div class="w3-light-grey w3-round-large">
+		            <div class="w3-container w3-blue w3-round-large" width="20%">{{orcamento.valorSomado*100/orcamento.valor}}%</div>
+		          </div>   
+		        </ion-col>
+      		</ion-row>
+      		<ion-row class="indicadores">
+		        <ion-col>
+		          <h2>R$0,00</h2>
+		        </ion-col>
+		        <ion-col>
+		          <h2>R${{orcamento.valorSomado}}</h2>
+		        </ion-col>
+		        <ion-col>
+		          <h2>R${{orcamento.valor}}</h2>
+		        </ion-col>
+      		</ion-row>
+        </ion-col>
+        
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col>
+          <h2>Valor restante: R$40,00</h2>
+        </ion-col>
+      </ion-row>
+
+     
+
+    </ion-item>
+
+
+
+
+  </ion-list>
+</ion-content>

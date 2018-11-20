@@ -3,26 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { CartaoPage } from '../pages/cartao/cartao';
+import { ContaPage } from '../pages/conta/conta';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { OrcamentoPage } from '../pages/orcamento/orcamento';
+import { DespesaPage } from '../pages/despesa/despesa';
+import { GraficosPage } from '../pages/graficos/graficos';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { SQLite } from '@ionic-native/sqlite'
 import { DatabaseProvider } from '../providers/database/database';
-import { ReceitaProvider } from '../providers/receita/receita';
-import { CategoriaProvider } from '../providers/categoria/categoria';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    ContaPage,
+    CartaoPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    OrcamentoPage,
+    GraficosPage,
+    DespesaPage
   ],
   imports: [
     BrowserModule,
@@ -31,10 +36,13 @@ import { CategoriaProvider } from '../providers/categoria/categoria';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    ContaPage,
+    CartaoPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    OrcamentoPage,
+    GraficosPage,
+    DespesaPage
   ],
   providers: [
     StatusBar,
@@ -42,9 +50,6 @@ import { CategoriaProvider } from '../providers/categoria/categoria';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SQLite,
     DatabaseProvider,
-    ReceitaProvider,
-    CategoriaProvider,
-    DatabaseProvider
   ]
 })
 export class AppModule {}

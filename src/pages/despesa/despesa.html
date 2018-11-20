@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Despesa</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<style type="text/css">
+    p{
+      text-align: center;
+      width: 100%;
+    }
+    .fill{
+      width: 100%;
+    }
+    .column {
+        float: left;
+        width: 50%;
+    }
+    .right *{
+      text-align: right;
+      width: 100%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+        ion-content{
+      background-color: lightgray;
+    }
+
+
+</style>
+
+<ion-content padding>
+  <ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-list *ngFor="let item of items">
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="./assets/imgs/gas.png">
+    </ion-avatar>
+     <div class="row fill">
+      <div class="column">
+        <h2>Salário: {{item}}</h2>
+        <h3>Itau</h3>
+      </div>
+      <div class="column right">
+        <h2 style="font-weight: bolder;">R$8,00</h2>
+        <h3>01/11/2018</h3>
+      </div>
+    </div> 
+    <p>Dizimo</p>
+  </ion-item>
+</ion-list>
+
+</ion-content>

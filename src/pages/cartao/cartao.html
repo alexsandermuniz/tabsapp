@@ -4,7 +4,7 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Cartoes</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -48,11 +48,11 @@
 </style>
 
 <ion-content padding >
-  <ion-list>
+  <ion-list *ngFor="let conta of contas">
     <ion-item text-wrap>
       <ion-row>
         <ion-col>
-          <h2>Nubank</h2>
+          <h2>{{conta.nome}}</h2>
        
         </ion-col>
       </ion-row>
@@ -69,17 +69,17 @@
 
       <ion-row>
         <ion-col>
-          <h2>Limite: R$2.300,00</h2>
+          <h2>Limite: R${{conta.limite}}</h2>
         </ion-col>
         <ion-col center text-right style="color: red;">
-          <h2>R$600</h2>
+          <h2>R${{conta.valorGasto}}</h2>
         </ion-col>
       </ion-row>
 
       
       <ion-row>
         <ion-col>
-          <div class="centered"><h3>Valor restante: R$1.676,00</h3></div>            
+          <div class="centered"><h3>Valor restante: R${{conta.valorRestante}}</h3></div>            
         </ion-col>
         <ion-col center text-right  >
           <ion-row class="teste">
